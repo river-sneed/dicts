@@ -26,7 +26,7 @@ import json
 # Global variables. Do not change the names of the globals in template.
 
 records = []   # list of all contacts
-keys = ['name', 'address', 'city', 'state', 'zip', 'mobile', 'email', 'birthday']
+keys = ['first name', 'last name', 'phone number', 'email', 'address', 'city', 'state', 'zip', 'birthday']
 data_file = 'contacts.json'
 
 
@@ -36,11 +36,13 @@ data_file = 'contacts.json'
 #    Once the list is loaded, display a message stating the number of
 #    contacts that were loaded.
 def load():
+    global records
     with open('contacts.json', 'r') as f:
-        raw = f.read()
-        contacts = json.loads(raw)
+        raw_data = f.read()
 
-        print(json.dumps({contacts}, sort_keys=True, indent=4))
+    records = json.loads(raw_data)
+    pretty_json_string = json.dumps(records, indent=4)
+    print(pretty_json_string)
 
 
 # 3. Write the records to a json file. Be sure to use 'pretty printing'
