@@ -26,7 +26,7 @@ import json
 # Global variables. Do not change the names of the globals in template.
 
 records = []   # list of all contacts
-keys = ['first name', 'last name', 'phone number', 'email', 'address', 'city', 'state', 'zip', 'birthday']
+keys = ['First Name', 'Last Name', 'Phone Number', 'Email', 'Address', 'City', 'State', 'Zip', 'Birthday']
 data_file = 'contacts.json'
 
 
@@ -37,12 +37,16 @@ data_file = 'contacts.json'
 #    contacts that were loaded.
 def load():
     global records
-    with open('contacts.json', 'r') as f:
+    
+    with open(data_file, 'r') as f:
         raw_data = f.read()
 
     records = json.loads(raw_data)
-    pretty_json_string = json.dumps(records, indent=4)
-    print(pretty_json_string)
+
+    print(str(len(records)) + " Data Sections Loaded")
+    #pretty_json_string = json.dumps(records, indent=4)
+    #print(pretty_json_string)
+
 
 
 # 3. Write the records to a json file. Be sure to use 'pretty printing'
@@ -63,7 +67,10 @@ def save():
 #    through keys rather than explicitly accessing each dictionary
 #    element.
 def display_record(contact):
-    pass
+    for a in keys:
+        if a in contact:
+            print(a + ":" + contact[a])
+    print()
 
 
 
@@ -72,7 +79,11 @@ def display_record(contact):
 #    function for each contact. To make the ouput easier to read,
 #    include a blank print statement after each record is displayed.
 def all():
-    pass
+    x = 0
+    while x < len(records):
+        print("contact number" + str(x))
+        display_record(records[x])
+        x += 1
 
 
 
@@ -124,6 +135,7 @@ def help():
 # Start the program.
 print('Contact Manager started.')
 load()
+
 print('Enter "help()" to see instructions.') 
 
 
