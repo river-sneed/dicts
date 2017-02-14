@@ -1,22 +1,24 @@
 [
-  {"First Name":"River",
-  "Last Name":"Sneed",
-  "Phone Number":"8648841503",
-  "Email":"riversneed@gmail.com",
-  "Adress":"22 Rothesay Street",
-  "City":"Simpsonville",
-  "State":"South Carolina",
-  "Zip":"29681",
-  "Birthday":"03/18/2001"
-  },
-  {"First Name":"Chris",
-  "Last Name":"Sneed",
-  "Phone Number":"8643132043",
-  "Email":"cvsneed@aol.com",
-  "Adress":"22 Rothesay Street",
-  "City":"Simpsonville",
-  "State":"South Carolina",
-  "Zip":"29681",
-  "Birthday":"03/21/1776"
-  }
+    {
+        "Adress": "22 Rothesay Street",
+        "Email": "riversneed@gmail.com",
+        "First Name": "River",
+        "City": "Simpsonville",
+        "Phone Number": "8648841503",
+        "Last Name": "Sneed",
+        "State": "South Carolina",
+        "Birthday": "03/18/2001",
+        "Zip": "29681"
+    },
+    {
+        "Adress": "22 Rothesay Street",
+        "Email": "cvsneed@aol.com",
+        "First Name": "Chris",
+        "City": "Simpsonville",
+        "Phone Number": "8643132043",
+        "Last Name": "Sneed",
+        "State": "South Carolina",
+        "Birthday": "03/21/1776",
+        "Zip": "29681"
+    }
 ]
